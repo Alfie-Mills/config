@@ -19,4 +19,6 @@ if [ -f "$PWD/.nvmrc" ]; then
     echo "\033[1;34m────────────────────────────────────────\033[0m"
 fi
 
+# Git config file sync
+alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 
