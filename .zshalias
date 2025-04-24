@@ -1,0 +1,22 @@
+alias sidkc="docker run --rm -it \
+-v /Users/$USER/.kube:/root/.kube \
+-v /Users/$USER/Developer/charts-sidigital:/root/helm \
+-v /Users/$USER/.aws:/root/.aws \
+-v /Users/$USER/.config:/root/.config \
+ghcr.io/sidgtl/kube-toolkit:1.31"
+
+alias nrd="npm run dev"
+
+alias oneokc="ssh oneokc"
+
+# not really an alias but whatevs its my file sooo
+if [ -f "$PWD/.nvmrc" ]; then
+    NVMRC_VERSION=$(cat .nvmrc)  
+    echo "\033[1;34m────────────────────────────────────────\033[0m"
+    echo "\033[1;32m✅ .nvmrc found! Switching to Node v$NVMRC_VERSION...\033[0m"
+    nvm use >/dev/null
+    export NODE_VERSION=$(node -v) 
+    echo "\033[1;34m────────────────────────────────────────\033[0m"
+fi
+
+
